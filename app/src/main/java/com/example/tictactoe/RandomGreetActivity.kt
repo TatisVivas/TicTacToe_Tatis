@@ -17,6 +17,10 @@ class RandomGreetActivity : AppCompatActivity() {
         binding = ActivityRandomGreetBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        cambiarTextos()
+
+    }
+    private fun cambiarTextos(){
         val language = intent.getStringExtra("seleccion")
         val saludo= when (language) {
             "English" -> "Hello!"
@@ -26,9 +30,7 @@ class RandomGreetActivity : AppCompatActivity() {
             "Italiano" -> "Ciao!"
             else -> "Hello!"
         }
-
         binding.textView.text = saludo
-
         val imageMap = mapOf(
             "English" to R.drawable.english,
             "Español" to R.drawable.espanol,

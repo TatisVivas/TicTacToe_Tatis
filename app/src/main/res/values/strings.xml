@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">TicTacToe</string>
+    <string name="tictactoe">TicTacToe</string>
+    <string name="random_greet">Random Greet</string>
+    <string name="countries">Countries</string>
     <string-array name="languages">
         <item>English</item>
         <item>Español</item>

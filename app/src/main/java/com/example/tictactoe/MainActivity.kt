@@ -23,16 +23,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        val adapter = ArrayAdapter.createFromResource(
-            this,
-            R.array.languages,
-            android.R.layout.simple_spinner_item
-        )
+        val adapter = ArrayAdapter.createFromResource(this, R.array.languages, android.R.layout.simple_spinner_item)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         binding.spinner.adapter = adapter
-
-
+        //Actividades
         binding.ticTacToe.setOnClickListener {
             startActivity(Intent(baseContext, TicTacToeActivity::class.java))
         }
@@ -42,6 +36,9 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(baseContext, RandomGreetActivity::class.java)
             intent.putExtra("seleccion", seleccion) //pasar de una actividad a otra
             startActivity(intent)
+        }
+        binding.countries.setOnClickListener {
+            startActivity(Intent(baseContext, CountriesActivity::class.java))
         }
 
 

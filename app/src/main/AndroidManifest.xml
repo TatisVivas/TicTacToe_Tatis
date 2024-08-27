@@ -13,7 +13,10 @@
         android:theme="@style/Theme.TicTacToe"
         tools:targetApi="31">
         <activity
-            android:name=".SpinnerActivity"
+            android:name=".InformationCountryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CountriesActivity"
             android:exported="false" />
         <activity
             android:name=".RandomGreetActivity"
